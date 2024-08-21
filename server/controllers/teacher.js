@@ -19,11 +19,23 @@ res.json({
 });
 }
 
+const getTeacher =async (req,res)=>{
+    const allTeacher = await Teacher.find();
+
+    res.json({
+        sucess:true,
+        message :"All Teachers Fetched Successfully!!",
+        data:allTeacher
+    })
+}
+
+
 
 
 
 
 export {
     postTeacher ,
+    getTeacher
    
 }
