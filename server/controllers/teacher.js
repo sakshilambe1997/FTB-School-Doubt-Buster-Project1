@@ -62,17 +62,24 @@ const putTeacher =async(req,res)=>{
     })
 }
 
+const deleteTeacher =async(req,res)=>{
+    const {id}=req.params;
 
+    const delPlant =await Teacher.deleteOne({_id:id})
 
-
-
-
+    res.json({
+        sucess:true,
+        message:"Teacher Deleted Successfully!!",
+        data:delPlant
+    })
+}
 
 
 export {
     postTeacher ,
     getTeacher,
     getTeacherById,
-    putTeacher
+    putTeacher,
+    deleteTeacher
    
 }
