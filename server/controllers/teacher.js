@@ -29,6 +29,17 @@ const getTeacher =async (req,res)=>{
     })
 }
 
+const getTeacherById = async(req,res)=>{
+    const {id}=req.params;
+    const teacher = await Teacher.findById(id);
+    res.json({
+        sucess: teacher? true:false,
+        message: teacher?"Teacher Fetched Successfully!!":"Teacher Not Found",
+        data: teacher || null
+    })
+}
+
+
 
 
 
@@ -36,6 +47,7 @@ const getTeacher =async (req,res)=>{
 
 export {
     postTeacher ,
-    getTeacher
+    getTeacher,
+    getTeacherById
    
 }
