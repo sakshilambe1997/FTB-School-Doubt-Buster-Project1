@@ -39,6 +39,30 @@ const getTeacherById = async(req,res)=>{
     })
 }
 
+const putTeacher =async(req,res)=>{
+    const {user,className,subject,complaint}= req.body;
+    const{id}=req.params;
+
+    const updateteacher = await Teacher.updateOne(
+      {_id:id},
+      {
+    $set:{
+        user,
+        className,
+        subject,
+        complaint
+    }
+})
+    const updatedResult = await Teacher.findById(id);
+
+    res.json({
+        sucess:true,
+        message:"TeacherUPdated Sucessfully!!",
+        data:updatedResult
+    })
+}
+
+
 
 
 
@@ -48,6 +72,7 @@ const getTeacherById = async(req,res)=>{
 export {
     postTeacher ,
     getTeacher,
-    getTeacherById
+    getTeacherById,
+    putTeacher
    
 }
