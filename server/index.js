@@ -7,9 +7,9 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import {createStudent, getAllStudents, getStudentById} from "./controllers/student.js";
-import { postComplaint,getComplaintById,getComplaints,updateComplaint } from "./controllers/complaint.js";  
+import { postComplaint,getComplaintById,getComplaints,updateComplaint ,deleteComplaint} from "./controllers/complaint.js";  
 
-import { postTeacher ,getTeacher,getTeacherById, putTeacher,deleteTeacher} from "./controllers/teacher.js";
+import { postTeacher } from "./controllers/teacher.js";
 
 const app = express()
 app.use(express.json())
@@ -45,12 +45,13 @@ app.post('/complaint', postComplaint)
 app.get('/complaintsbyid/:id', getComplaintById)
 app.get('/complaints',getComplaints)
 app.put('/updatecomplaint/:id', updateComplaint)
+app.delete('/deletecomplaint/:id', deleteComplaint)
 
 app.post("/teacher",postTeacher);
-app.get("/teachers",getTeacher);
-app.get("/teacher/:id",getTeacherById);
-app.put("/teacher/:id", putTeacher);
-app.delete("/teacher/:id",deleteTeacher)
+// app.get("/teachers",getTeacher);
+// app.get("/teacher/:id",getTeacherById);
+// app.put("/teacher/:id", putTeacher);
+// app.delete("/teacher/:id",deleteTeacher)
 
 
 
