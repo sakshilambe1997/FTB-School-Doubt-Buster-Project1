@@ -21,17 +21,6 @@ res.json({
 
 
 
-// import { postTeacher ,getTeacher,getTeacherById, putTeacher,
-// deleteTeacher} from "./controllers/teacher.js";
-
-// app.post("/teacher",postTeacher);
-// app.get("/teachers",getTeacher);
-// app.get("/teacher/:id",getTeacherById);
-// app.put("/teacher/:id", putTeacher);
-// app.delete("/teacher/:id",deleteTeacher)
-
-
-
 
 
 export {
