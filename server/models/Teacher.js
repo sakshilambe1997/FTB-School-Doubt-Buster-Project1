@@ -6,7 +6,7 @@ const teacherSchema = new Schema({
     ref: 'User',
     required: true
   },
-  class: {
+  className: {
     type: Schema.Types.ObjectId,
     ref: 'Class',
     required: true
@@ -15,7 +15,7 @@ const teacherSchema = new Schema({
     type: String,
     required: true,
   },
-  Complaint: {
+  complaint: {
     type: Schema.Types.ObjectId,
     ref: 'Complaint',
     required: true
