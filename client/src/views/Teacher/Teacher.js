@@ -1,10 +1,13 @@
 import React from "react";
 import "./Teacher.css";
+import "./../../index.js"
+import Navbar from './../../components/dynamicGreet/greetCard'
 
 function Teacher() {
   return (
     <>
-      <div className="Teacher-form">
+    <Navbar/>
+      <div className="Teacher-form ">
         <h1 className="form-heading">Teacher Form</h1>
 
         <form>
