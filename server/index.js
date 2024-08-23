@@ -8,9 +8,20 @@ dotenv.config();
 
 
 import {createStudent, getAllStudents, getStudentById} from "./controllers/student.js";
-import { postComplaint,getComplaintById,getComplaints,updateComplaint ,deleteComplaint} from "./controllers/complaint.js";  
 
-import { postTeacher } from "./controllers/teacher.js";
+import{ postComplaint,
+    getComplaintById,
+    getComplaints,
+    updateComplaint ,
+    deleteComplaint,
+    getComplaintsByUser,
+    getComplaintsByParent,
+    getComplaintsByClass} from "./controllers/complaint.js";  
+
+    import { postParent, getAllParent, getParentById, putParent, delParent} from "./controllers/parent.js";
+
+import { getClassbyId, postClass } from "./controllers/class.js";
+
 
 const app = express()
 app.use(express.json())
@@ -47,8 +58,21 @@ app.get('/complaintsbyid/:id', getComplaintById)
 app.get('/complaints',getComplaints)
 app.put('/updatecomplaint/:id', updateComplaint)
 app.delete('/deletecomplaint/:id', deleteComplaint)
+app.get('/complaintsbyuser/:id', getComplaintsByUser)
+app.get('/complaintbyparent/:id',getComplaintsByParent)
+app.get('/complaintsbyclass/:id', getComplaintsByClass)
 
-app.post("/teacher",postTeacher);
+
+app.post('/createClass',postClass)
+app.get('/fetchClasses/:id',getClassbyId)
+
+app.post('/parent', postParent)
+app.get('/parents', getAllParent)
+app.get('/parents/:id', getParentById)
+app.put('/parents/:id', putParent)
+app.delete('/parents/:id',delParent)
+
+// app.post("/teacher",postTeacher);
 // app.get("/teachers",getTeacher);
 // app.get("/teacher/:id",getTeacherById);
 // app.put("/teacher/:id", putTeacher);
