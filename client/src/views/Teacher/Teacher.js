@@ -2,6 +2,7 @@ import React from "react";
 import "./Teacher.css";
 import "./../../index.js"
 import Navbar from './../../components/dynamicGreet/greetCard'
+import Footer from './../../components/Footer/footer'
 
 function Teacher() {
   return (
@@ -20,6 +21,8 @@ function Teacher() {
           <input type="text" placeholder="Complaint" className="input-box"></input>
         </form>
       </div>
+
+      <Footer/>
     </>
   );
 }
