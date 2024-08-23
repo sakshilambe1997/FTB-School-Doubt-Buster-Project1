@@ -19,6 +19,8 @@ function Teacher() {
           <input type="text" placeholder="Subject" className="input-box"></input>
 
           <input type="text" placeholder="Complaint" className="input-box"></input>
+
+          <button type="button" className="btn">Submit</button>
         </form>
       </div>
 
