@@ -6,6 +6,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
 
+
 import {createStudent, getAllStudents, getStudentById} from "./controllers/student.js";
 import { postComplaint,getComplaintById,getComplaints,updateComplaint ,deleteComplaint} from "./controllers/complaint.js";  
 

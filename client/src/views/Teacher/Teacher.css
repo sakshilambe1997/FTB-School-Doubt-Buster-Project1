@@ -1,0 +1,27 @@
+.Teacher-form{
+    padding: 30px 10px;
+    background-color: bisque;
+    width: 340px;
+    text-align: center;
+    display: block;
+    margin: 50px auto;
+    border-radius: 10px;
+
+}
+
+.form-heading{
+    margin: 0px;
+}
+
+.input-box{
+    margin: 15px;
+    width: 250px;
+    padding: 10px 15px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+ .input-box:active,.input-box:focus{
+    outline: none;
+ }
